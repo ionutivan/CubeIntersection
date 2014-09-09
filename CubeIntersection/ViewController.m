@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "Cube.h"
 #import "CubeTextField.h"
+#import "NSString+CubeIntersection.h"
 
 @interface ViewController ()
 
@@ -27,7 +28,7 @@
 @property (nonatomic, weak) IBOutlet UILabel *resultLabel;
 @property (nonatomic, weak) IBOutlet UIButton *computeButton;
 
-@property (nonatomic, weak) IBOutletCollection(CubeTextField) NSArray *textFields;
+@property (nonatomic, strong) IBOutletCollection(CubeTextField) NSArray *textFields;
 
 @end
 
@@ -59,12 +60,22 @@
   self.zCoordTextFieldCube2.placeholder = NSLocalizedString(@"z_coord", nil);
   self.sizeTextFieldCube2.placeholder = NSLocalizedString(@"size", nil);
   
+  self.xCoordTextFieldCube1.text = @"";
+  self.yCoordTextFieldCube1.text = @"";
+  self.zCoordTextFieldCube1.text = @"";
+  self.sizeTextFieldCube1.text = @"";
+  
+  self.xCoordTextFieldCube2.text = @"";
+  self.yCoordTextFieldCube2.text = @"";
+  self.zCoordTextFieldCube2.text = @"";
+  self.sizeTextFieldCube2.text = @"";
+  
   [self.computeButton setTitle:NSLocalizedString(@"check_compute", nil) forState:UIControlStateNormal];
   self.resultLabel.text = @"";
   
 }
 
-- (BOOL)checkValues {
+- (BOOL)textFieldValuesAreOK {
   
   for (CubeTextField *textField in self.textFields) {
     if ([textField.text length]==0 || ![textField.text isAllDigits]) {
@@ -74,10 +85,21 @@
   }
 
   
-  return NO;
+  return YES;
 }
 
 - (IBAction)computeIntersection:(id)sender {
+  
+  if (![self textFieldValuesAreOK]) {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:nil
+                                                    message:NSLocalizedString(@"alert_values_not_correct", nil)
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+    return;
+  }
+  
   Cube *cube1 = [[Cube alloc] initWithSize:self.sizeTextFieldCube1.text.floatValue
                               xCenterCoord:self.xCoordTextFieldCube1.text.floatValue
                               yCenterCoord:self.yCoordTextFieldCube1.text.floatValue

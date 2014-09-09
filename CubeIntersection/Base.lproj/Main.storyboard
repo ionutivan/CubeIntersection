@@ -104,7 +104,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhG-xq-2au">
-                                                <rect key="frame" x="237" y="0.0" width="52" height="21"/>
+                                                <rect key="frame" x="248" y="0.0" width="52" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                                             <constraint firstItem="Fu7-RY-6dz" firstAttribute="leading" secondItem="pqr-pc-TyC" secondAttribute="leading" constant="34" id="0RJ-9Q-LrE"/>
                                             <constraint firstAttribute="height" constant="260" id="2pn-ua-84z"/>
                                             <constraint firstItem="gDS-RZ-eu4" firstAttribute="top" secondItem="RxJ-Lb-ZJU" secondAttribute="bottom" constant="20" id="4CE-oZ-rNv"/>
-                                            <constraint firstAttribute="trailing" secondItem="yhG-xq-2au" secondAttribute="trailing" constant="31" id="4S3-fk-If5"/>
+                                            <constraint firstAttribute="trailing" secondItem="yhG-xq-2au" secondAttribute="trailing" constant="20" id="4S3-fk-If5"/>
                                             <constraint firstAttribute="trailing" secondItem="7Y6-Xu-trw" secondAttribute="trailing" constant="20" id="EYi-SE-YbD"/>
                                             <constraint firstItem="bE7-xl-3r7" firstAttribute="leading" secondItem="pqr-pc-TyC" secondAttribute="leading" constant="34" id="PVD-vU-zIl"/>
                                             <constraint firstItem="Fu7-RY-6dz" firstAttribute="top" secondItem="bE7-xl-3r7" secondAttribute="bottom" constant="20" id="UGk-Bm-3kQ"/>
@@ -187,6 +187,14 @@
                         <outlet property="yCoordTextFieldCube2" destination="7Y6-Xu-trw" id="JdN-Qu-5AC"/>
                         <outlet property="zCoordTextFieldCube1" destination="Fu7-RY-6dz" id="EHu-kf-dD0"/>
                         <outlet property="zCoordTextFieldCube2" destination="dae-jw-auP" id="mkD-wq-MMZ"/>
+                        <outletCollection property="textFields" destination="gDS-RZ-eu4" id="7E0-EI-iRE"/>
+                        <outletCollection property="textFields" destination="bE7-xl-3r7" id="inW-9c-okV"/>
+                        <outletCollection property="textFields" destination="Fu7-RY-6dz" id="nos-Qv-bhf"/>
+                        <outletCollection property="textFields" destination="HeI-21-K1b" id="foz-vX-DTW"/>
+                        <outletCollection property="textFields" destination="UTk-MM-05e" id="UsN-BM-naA"/>
+                        <outletCollection property="textFields" destination="7Y6-Xu-trw" id="MEe-E0-9AU"/>
+                        <outletCollection property="textFields" destination="dae-jw-auP" id="WoS-Qu-CGj"/>
+                        <outletCollection property="textFields" destination="Lj0-RA-qGo" id="ooX-5R-lcJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

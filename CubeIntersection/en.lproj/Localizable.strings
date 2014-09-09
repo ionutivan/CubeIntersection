@@ -9,9 +9,10 @@
 "x_coord" = "x coordinate";
 "y_coord" = "y coordinate";
 "z_coord" = "z coordinate";
-"size" = "size";
+"size" = "size in m";
 "check_compute" = "Calculate intersection volume";
 "cube_1_title" = "cube 1";
 "cube_2_title" = "cube 2";
 
 "no_intersection" = "The cubes don't intersect.";
+"alert_values_not_correct" = "The values introduced are not correct. Please verify.";
