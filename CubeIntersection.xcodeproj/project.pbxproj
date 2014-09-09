@@ -22,6 +22,7 @@
 		C664181D19BEF5F800A3E66D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C664181B19BEF5F800A3E66D /* InfoPlist.strings */; };
 		C664181F19BEF5F800A3E66D /* CubeIntersectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C664181E19BEF5F800A3E66D /* CubeIntersectionTests.m */; };
 		C664182A19BEFEDE00A3E66D /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = C664182919BEFEDE00A3E66D /* Cube.m */; };
+		C664182D19BF47DD00A3E66D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C664182F19BF47DD00A3E66D /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		C664181E19BEF5F800A3E66D /* CubeIntersectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeIntersectionTests.m; sourceTree = "<group>"; };
 		C664182819BEFEDE00A3E66D /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
 		C664182919BEFEDE00A3E66D /* Cube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube.m; sourceTree = "<group>"; };
+		C664182E19BF47DD00A3E66D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C664183019BF482300A3E66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +127,7 @@
 				C664182919BEFEDE00A3E66D /* Cube.m */,
 				C664180B19BEF5F700A3E66D /* Images.xcassets */,
 				C66417FA19BEF5F700A3E66D /* Supporting Files */,
+				C664182F19BF47DD00A3E66D /* Localizable.strings */,
 			);
 			path = CubeIntersection;
 			sourceTree = "<group>";
@@ -234,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C664180C19BEF5F700A3E66D /* Images.xcassets in Resources */,
+				C664182D19BF47DD00A3E66D /* Localizable.strings in Resources */,
 				C66417FE19BEF5F700A3E66D /* InfoPlist.strings in Resources */,
 				C664180719BEF5F700A3E66D /* Main.storyboard in Resources */,
 			);
@@ -302,6 +307,15 @@
 				C664181C19BEF5F800A3E66D /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C664182F19BF47DD00A3E66D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C664182E19BF47DD00A3E66D /* en */,
+				C664183019BF482300A3E66D /* Base */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
