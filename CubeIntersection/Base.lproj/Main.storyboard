@@ -171,6 +171,20 @@
                             <constraint firstAttribute="centerX" secondItem="Mht-nC-yHR" secondAttribute="centerX" id="teG-za-Zvv"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="computeButton" destination="Mht-nC-yHR" id="N9J-Jd-UHv"/>
+                        <outlet property="cube1TitleLabel" destination="RxJ-Lb-ZJU" id="U3B-bY-os3"/>
+                        <outlet property="cube2TitleLabel" destination="yhG-xq-2au" id="TC1-tY-Qdz"/>
+                        <outlet property="resultLabel" destination="byg-pU-U0Z" id="dIx-9F-BHY"/>
+                        <outlet property="sizeTextFieldCube1" destination="HeI-21-K1b" id="HYe-Wz-GDm"/>
+                        <outlet property="sizeTextFieldCube2" destination="Lj0-RA-qGo" id="LYI-ye-v66"/>
+                        <outlet property="xCoordTextFieldCube1" destination="gDS-RZ-eu4" id="udu-Mq-8Mr"/>
+                        <outlet property="xCoordTextFieldCube2" destination="UTk-MM-05e" id="khX-YI-v8k"/>
+                        <outlet property="yCoordTextFieldCube1" destination="bE7-xl-3r7" id="iqi-cN-9JH"/>
+                        <outlet property="yCoordTextFieldCube2" destination="7Y6-Xu-trw" id="JdN-Qu-5AC"/>
+                        <outlet property="zCoordTextFieldCube1" destination="Fu7-RY-6dz" id="EHu-kf-dD0"/>
+                        <outlet property="zCoordTextFieldCube2" destination="dae-jw-auP" id="mkD-wq-MMZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

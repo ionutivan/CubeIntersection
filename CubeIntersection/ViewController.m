@@ -10,20 +10,36 @@
 
 @interface ViewController ()
 
+@property (nonatomic, weak) IBOutlet UITextField *xCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet UITextField *yCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet UITextField *zCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet UITextField *sizeTextFieldCube1;
+
+@property (nonatomic, weak) IBOutlet UITextField *xCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet UITextField *yCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet UITextField *zCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet UITextField *sizeTextFieldCube2;
+
+@property (nonatomic, weak) IBOutlet UILabel *cube1TitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *cube2TitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel *resultLabel;
+@property (nonatomic, weak) IBOutlet UIButton *computeButton;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+  [super viewDidLoad];
+  
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
 }
+
+
 
 @end
