@@ -21,6 +21,7 @@
 		C664181519BEF5F800A3E66D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C66417F719BEF5F700A3E66D /* UIKit.framework */; };
 		C664181D19BEF5F800A3E66D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C664181B19BEF5F800A3E66D /* InfoPlist.strings */; };
 		C664181F19BEF5F800A3E66D /* CubeIntersectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C664181E19BEF5F800A3E66D /* CubeIntersectionTests.m */; };
+		C664182A19BEFEDE00A3E66D /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = C664182919BEFEDE00A3E66D /* Cube.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		C664181A19BEF5F800A3E66D /* CubeIntersectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CubeIntersectionTests-Info.plist"; sourceTree = "<group>"; };
 		C664181C19BEF5F800A3E66D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C664181E19BEF5F800A3E66D /* CubeIntersectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CubeIntersectionTests.m; sourceTree = "<group>"; };
+		C664182819BEFEDE00A3E66D /* Cube.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Cube.h; sourceTree = "<group>"; };
+		C664182919BEFEDE00A3E66D /* Cube.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cube.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				C664180519BEF5F700A3E66D /* Main.storyboard */,
 				C664180819BEF5F700A3E66D /* ViewController.h */,
 				C664180919BEF5F700A3E66D /* ViewController.m */,
+				C664182819BEFEDE00A3E66D /* Cube.h */,
+				C664182919BEFEDE00A3E66D /* Cube.m */,
 				C664180B19BEF5F700A3E66D /* Images.xcassets */,
 				C66417FA19BEF5F700A3E66D /* Supporting Files */,
 			);
@@ -249,6 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C664182A19BEFEDE00A3E66D /* Cube.m in Sources */,
 				C664180A19BEF5F700A3E66D /* ViewController.m in Sources */,
 				C664180419BEF5F700A3E66D /* AppDelegate.m in Sources */,
 				C664180019BEF5F700A3E66D /* main.m in Sources */,
