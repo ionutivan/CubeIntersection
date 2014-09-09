@@ -24,6 +24,7 @@
 		C664182A19BEFEDE00A3E66D /* Cube.m in Sources */ = {isa = PBXBuildFile; fileRef = C664182919BEFEDE00A3E66D /* Cube.m */; };
 		C664182D19BF47DD00A3E66D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C664182F19BF47DD00A3E66D /* Localizable.strings */; };
 		C664183319BF8F5E00A3E66D /* CubeTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = C664183219BF8F5E00A3E66D /* CubeTextField.m */; };
+		C664183619BF944C00A3E66D /* NSString+CubeIntersection.m in Sources */ = {isa = PBXBuildFile; fileRef = C664183519BF944C00A3E66D /* NSString+CubeIntersection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		C664183019BF482300A3E66D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C664183119BF8F5E00A3E66D /* CubeTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CubeTextField.h; sourceTree = "<group>"; };
 		C664183219BF8F5E00A3E66D /* CubeTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CubeTextField.m; sourceTree = "<group>"; };
+		C664183419BF944C00A3E66D /* NSString+CubeIntersection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CubeIntersection.h"; sourceTree = "<group>"; };
+		C664183519BF944C00A3E66D /* NSString+CubeIntersection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CubeIntersection.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +133,8 @@
 				C664182919BEFEDE00A3E66D /* Cube.m */,
 				C664183119BF8F5E00A3E66D /* CubeTextField.h */,
 				C664183219BF8F5E00A3E66D /* CubeTextField.m */,
+				C664183419BF944C00A3E66D /* NSString+CubeIntersection.h */,
+				C664183519BF944C00A3E66D /* NSString+CubeIntersection.m */,
 				C664180B19BEF5F700A3E66D /* Images.xcassets */,
 				C66417FA19BEF5F700A3E66D /* Supporting Files */,
 				C664182F19BF47DD00A3E66D /* Localizable.strings */,
@@ -267,6 +272,7 @@
 				C664182A19BEFEDE00A3E66D /* Cube.m in Sources */,
 				C664180A19BEF5F700A3E66D /* ViewController.m in Sources */,
 				C664180419BEF5F700A3E66D /* AppDelegate.m in Sources */,
+				C664183619BF944C00A3E66D /* NSString+CubeIntersection.m in Sources */,
 				C664180019BEF5F700A3E66D /* main.m in Sources */,
 				C664183319BF8F5E00A3E66D /* CubeTextField.m in Sources */,
 			);
