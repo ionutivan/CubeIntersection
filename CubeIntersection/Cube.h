@@ -24,8 +24,10 @@ typedef NS_ENUM(NSInteger, AxisType) {
 
 - (instancetype)initWithSize:(CGFloat)size xCenterCoord:(CGFloat)xCoord yCenterCoord:(CGFloat)yCoord zCenterCoord:(CGFloat)zCoord;
 
-- (BOOL)doesIntersectWithCube:(Cube *)anotherCube inPlanType:(IntersectionPlanType)plan;
+- (BOOL)intersectsWithCube:(Cube *)anotherCube;
 
 - (CGFloat)intersectionSegmentSizeWithCube:(Cube *)anotherCube onAxisType:(AxisType)axisType;
+
++ (CGFloat)volumeForXAxisSize:(CGFloat)xSize yAxisSize:(CGFloat)ySize zAxisSize:(CGFloat)zSize;
 
 @end

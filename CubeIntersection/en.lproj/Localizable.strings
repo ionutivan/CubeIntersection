@@ -13,3 +13,5 @@
 "check_compute" = "Calculate intersection volume";
 "cube_1_title" = "cube 1";
 "cube_2_title" = "cube 2";
+
+"no_intersection" = "The cubes don't intersect.";

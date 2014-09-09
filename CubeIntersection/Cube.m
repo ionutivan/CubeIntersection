@@ -79,6 +79,17 @@
   
 }
 
+- (BOOL)intersectsWithCube:(Cube *)anotherCube {
+  
+  if ([self doesIntersectWithCube:anotherCube inPlanType:IntersectionPlanTypeXoY] &&
+      [self doesIntersectWithCube:anotherCube inPlanType:IntersectionPlanTypeXoZ] &&
+      [self doesIntersectWithCube:anotherCube inPlanType:IntersectionPlanTypeYoZ]) {
+    return YES;
+  }
+  
+  return NO;
+}
+
 - (CGFloat)intersectionSegmentSizeWithCube:(Cube *)anotherCube onAxisType:(AxisType)axisType {
   
   CGFloat resultSize = 0;
