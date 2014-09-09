@@ -8,23 +8,26 @@
 
 #import "ViewController.h"
 #import "Cube.h"
+#import "CubeTextField.h"
 
 @interface ViewController ()
 
-@property (nonatomic, weak) IBOutlet UITextField *xCoordTextFieldCube1;
-@property (nonatomic, weak) IBOutlet UITextField *yCoordTextFieldCube1;
-@property (nonatomic, weak) IBOutlet UITextField *zCoordTextFieldCube1;
-@property (nonatomic, weak) IBOutlet UITextField *sizeTextFieldCube1;
+@property (nonatomic, weak) IBOutlet CubeTextField *xCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet CubeTextField *yCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet CubeTextField *zCoordTextFieldCube1;
+@property (nonatomic, weak) IBOutlet CubeTextField *sizeTextFieldCube1;
 
-@property (nonatomic, weak) IBOutlet UITextField *xCoordTextFieldCube2;
-@property (nonatomic, weak) IBOutlet UITextField *yCoordTextFieldCube2;
-@property (nonatomic, weak) IBOutlet UITextField *zCoordTextFieldCube2;
-@property (nonatomic, weak) IBOutlet UITextField *sizeTextFieldCube2;
+@property (nonatomic, weak) IBOutlet CubeTextField *xCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet CubeTextField *yCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet CubeTextField *zCoordTextFieldCube2;
+@property (nonatomic, weak) IBOutlet CubeTextField *sizeTextFieldCube2;
 
 @property (nonatomic, weak) IBOutlet UILabel *cube1TitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *cube2TitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel *resultLabel;
 @property (nonatomic, weak) IBOutlet UIButton *computeButton;
+
+@property (nonatomic, weak) IBOutletCollection(CubeTextField) NSArray *textFields;
 
 @end
 
@@ -33,7 +36,7 @@
 - (void)viewDidLoad
 {
   [super viewDidLoad];
-  
+  [self prepareIBOutlets];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +59,22 @@
   self.zCoordTextFieldCube2.placeholder = NSLocalizedString(@"z_coord", nil);
   self.sizeTextFieldCube2.placeholder = NSLocalizedString(@"size", nil);
   
+  [self.computeButton setTitle:NSLocalizedString(@"check_compute", nil) forState:UIControlStateNormal];
+  self.resultLabel.text = @"";
+  
+}
+
+- (BOOL)checkValues {
+  
+  for (CubeTextField *textField in self.textFields) {
+    if ([textField.text length]==0 || ![textField.text isAllDigits]) {
+      [textField becomeFirstResponder];
+      return NO;
+    }
+  }
+
+  
+  return NO;
 }
 
 - (IBAction)computeIntersection:(id)sender {
@@ -81,5 +100,7 @@
     self.resultLabel.text = NSLocalizedString(@"no_intersection", nil);
   }
 }
+
+//check all fields if have values and values are
 
 @end
