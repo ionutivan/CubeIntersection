@@ -11,6 +11,11 @@
 #import "CubeTextField.h"
 #import "NSString+CubeIntersection.h"
 
+#define kInitialScrollViewButtonDistance 35
+#define kInitialScrollViewHeight 200
+#define kKeyboardOnScrollViewHeight 150
+#define kKeyboardOnScrollViewButtonDistance 15
+
 @interface ViewController ()
 
 @property (nonatomic, weak) IBOutlet CubeTextField *xCoordTextFieldCube1;
@@ -28,6 +33,9 @@
 @property (nonatomic, weak) IBOutlet UILabel *resultLabel;
 @property (nonatomic, weak) IBOutlet UIButton *computeButton;
 
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *scrollViewHeightLayoutConstraint;
+@property (nonatomic, weak) IBOutlet NSLayoutConstraint *scrollViewButtonDistanceLayoutConstraint;
+
 @property (nonatomic, strong) IBOutletCollection(CubeTextField) NSArray *textFields;
 
 @end
@@ -38,6 +46,9 @@
 {
   [super viewDidLoad];
   [self prepareIBOutlets];
+  
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:@"UIKeyboardWillShowNotification" object:nil];
+  [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:@"UIKeyboardWillHideNotification" object:nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -123,6 +134,37 @@
   }
 }
 
-//check all fields if have values and values are
+#pragma mark - Keyboard notifications
+
+- (void)keyboardWillShow:(NSNotification *)notification {
+  
+  if ([UIScreen mainScreen].bounds.size.height < 568) {
+    NSDictionary *userInfo = [notification userInfo];
+    float desiredDuration = [userInfo[@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
+    [self updateConstraint:self.scrollViewHeightLayoutConstraint constant:kKeyboardOnScrollViewHeight speed:desiredDuration];
+    [self updateConstraint:self.scrollViewButtonDistanceLayoutConstraint constant:kKeyboardOnScrollViewButtonDistance speed:desiredDuration];
+  }
+ 
+}
+
+- (void)keyboardWillHide:(NSNotification *)notification {
+  
+  if ([UIScreen mainScreen].bounds.size.height < 568) {
+    NSDictionary *userInfo = [notification userInfo];
+    float desiredDuration = [userInfo[@"UIKeyboardAnimationDurationUserInfoKey"] floatValue];
+    [self updateConstraint:self.scrollViewHeightLayoutConstraint constant:kInitialScrollViewHeight speed:desiredDuration];
+    [self updateConstraint:self.scrollViewButtonDistanceLayoutConstraint constant:kInitialScrollViewButtonDistance speed:desiredDuration];
+  }
+  
+}
+
+- (void)updateConstraint:(NSLayoutConstraint *)constraint constant:(float)constant speed:(float)speed {
+  
+  [UIView animateWithDuration:speed animations:^{
+    constraint.constant = constant;
+    [self.view layoutIfNeeded];
+  }];
+  
+}
 
 @end

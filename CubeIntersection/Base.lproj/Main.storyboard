@@ -179,6 +179,8 @@
                         <outlet property="cube1TitleLabel" destination="RxJ-Lb-ZJU" id="U3B-bY-os3"/>
                         <outlet property="cube2TitleLabel" destination="yhG-xq-2au" id="TC1-tY-Qdz"/>
                         <outlet property="resultLabel" destination="byg-pU-U0Z" id="dIx-9F-BHY"/>
+                        <outlet property="scrollViewButtonDistanceLayoutConstraint" destination="Ga8-90-y6B" id="Jpl-kf-2iX"/>
+                        <outlet property="scrollViewHeightLayoutConstraint" destination="9cg-Y0-9ke" id="c1a-Rm-H4m"/>
                         <outlet property="sizeTextFieldCube1" destination="HeI-21-K1b" id="HYe-Wz-GDm"/>
                         <outlet property="sizeTextFieldCube2" destination="Lj0-RA-qGo" id="LYI-ye-v66"/>
                         <outlet property="xCoordTextFieldCube1" destination="gDS-RZ-eu4" id="udu-Mq-8Mr"/>
